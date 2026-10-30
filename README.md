@@ -1,6 +1,6 @@
 # golden × notebook — 合併後單一模組 `vv0101v01/golden`
 
-`https://github.com/vv0101v01/mm0` · 提交 `d1cd19d` · 267 個 `.mbt`／155,058 行 · 41 套件／13 聯邦 · `moon test` 192/192
+`https://github.com/vv0101v01/mm0` · 樹提交 `5d47031` · 267 個 `.mbt`／155,058 行 · 41 套件／13 聯邦 · `moon test` 192/192
 
 兩個 MoonBit 庫合併成**一棵樹**：`golden`（cubical-hermitian：精確代數、立方型／Kan 填充、topos／概形）
 ×  `notebook`（tensorlab：模消元、半環、有限範疇／置換群）。

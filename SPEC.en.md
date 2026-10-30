@@ -1281,7 +1281,7 @@ What was pushed is exactly the merged tree (**only the synthesized final form**)
 | Item | Value |
 |---|---|
 | Remote | `https://github.com/vv0101v01/mm0` (branch `main`) |
-| Commit | `d1cd19d` (tree `5d47031` + docs) |
+| Commit | tree commit `5d47031`; afterwards only documentation commits (`d1cd19d` / `f8ebc32`), so HEAD moves with the docs |
 | Files | **354** (267 `.mbt` plus docs / tools / ledger / logs) |
 | Tree size | 6.2 MB (versus 268 MB in the working directory — the difference is `_build/` and `.mooncakes/`) |
 | Excluded | `_build/`, `.mooncakes/`, `*.mbti` (listed explicitly in `.gitignore`) |

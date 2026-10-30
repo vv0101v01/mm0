@@ -1,0 +1,8 @@
+import {
+  "vv0101v01/golden/bridge",
+  "vv0101v01/golden/semiring/graph" @sgraph,
+  "vv0101v01/golden/symlib" @sym,
+  "vv0101v01/golden" @cub,
+}
+
+pkgtype(kind: "executable")

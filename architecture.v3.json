@@ -1,0 +1,233 @@
+{
+  "schema": "architecture.v3",
+  "module": "vv0101v01/golden",
+  "federations": {
+    "F1_cubical": {
+      "packages": [
+        "."
+      ],
+      "imports": [
+        "F6_elim",
+        "F7_super"
+      ],
+      "note": "第七輪把 golden 的 76k 行 root 套件原樣併入（63 個 .mbt）；只依賴 exact/algebra"
+    },
+    "F2_symlib": {
+      "packages": [
+        "symlib"
+      ],
+      "imports": [],
+      "note": "已併入（零依賴）"
+    },
+    "F3_goldenalgebra": {
+      "packages": [
+        "exact/algebra"
+      ],
+      "imports": [],
+      "note": "golden 的精確 BigInt 代數（本輪未改一行，是整個係數環塔的底座）"
+    },
+    "F3_semiring": {
+      "packages": [
+        "semiring/algebra",
+        "semiring/app",
+        "semiring/bp",
+        "semiring/cat",
+        "semiring/examples",
+        "semiring/graph",
+        "semiring/io",
+        "semiring/matrix",
+        "semiring/monoid",
+        "semiring/nf",
+        "semiring/par",
+        "semiring/par_host",
+        "semiring/ratelimit",
+        "semiring/sim",
+        "semiring/spline",
+        "semiring/trop"
+      ],
+      "imports": [
+        "F3_goldenalgebra"
+      ],
+      "note": "第七輪整批併入：23 個套件，只依賴 F3_goldenalgebra（par_host 需 native + async，其餘四 target 全過）"
+    },
+    "F4_topos": {
+      "packages": [
+        "topos"
+      ],
+      "imports": [
+        "F6_elim",
+        "F2_symlib"
+      ],
+      "note": "已併入；非阿貝爾 Čech H¹ 待接 B2"
+    },
+    "F5_scheme": {
+      "packages": [
+        "scheme"
+      ],
+      "imports": [
+        "F6_elim"
+      ],
+      "note": "已併入"
+    },
+    "F6_elim": {
+      "packages": [
+        "elim/core",
+        "elim/tensor",
+        "elim/nc",
+        "elim/twist",
+        "elim/gauge",
+        "elim/radon",
+        "elim/metric"
+      ],
+      "imports": [],
+      "note": "庫（工具），不是主權單位：任何聯邦可 import"
+    },
+    "F7_super": {
+      "packages": [
+        "super/score",
+        "super/spec",
+        "super/sledger"
+      ],
+      "imports": [
+        "F6_elim"
+      ],
+      "note": "庫；sledger 只依賴 core/string，保持宿主無關"
+    },
+    "L_coeff": {
+      "packages": [
+        "coeff"
+      ],
+      "imports": [
+        "F6_elim"
+      ],
+      "note": "庫（不是聯邦）：係數環一等公民。只依賴 exact/algebra + elim/core；bridge 與未來 kernel 共用"
+    },
+    "apex_bridge": {
+      "packages": [
+        "bridge",
+        "cmd/audit",
+        "cmd/main",
+        "cmd/showcase",
+        "cmd/symbench",
+        "cmd/symdemo",
+        "cmd/semiringreport"
+      ],
+      "imports": [
+        "F6_elim",
+        "F7_super",
+        "L_coeff",
+        "F2_symlib",
+        "F4_topos"
+      ],
+      "note": "第七輪把 golden/bridge 的 10 個檔併入同一套件（零符號衝突），並併入 5 個 demo 可執行包"
+    },
+    "F8_higher": {
+      "packages": [
+        "higher"
+      ],
+      "imports": [
+        "L_coeff"
+      ],
+      "note": "第 3 輪新增：Kan 條件、π₁ 表示、∞-groupoid 補角實驗（reuse vs fresh）"
+    },
+    "F9_homotopy": {
+      "packages": [
+        "homotopy"
+      ],
+      "imports": [
+        "L_coeff"
+      ],
+      "note": "第 3 輪新增：Gysin/透鏡空間、Adem 一次阻礙、Cayley–Dickson、Postnikov k-invariant"
+    },
+    "F10_opt": {
+      "packages": [
+        "opt"
+      ],
+      "imports": [
+        "F3_goldenalgebra"
+      ],
+      "note": "第 3 輪新增：精確有理單純形、團數分支定界、Carlet 代數免疫度"
+    }
+  },
+  "package_rules": {
+    "alias_equals_last_segment": true,
+    "rename_package_forbidden": "改名會使 @pkg 引用失效（合併 notebook 的源碼改動為 0 行即靠此）",
+    "executables": [
+      "cmd/audit",
+      "cmd/main",
+      "cmd/showcase",
+      "cmd/symbench",
+      "cmd/symdemo",
+      "cmd/semiringreport"
+    ],
+    "forbidden_edges": [
+      [
+        "F6_elim",
+        "apex_bridge"
+      ],
+      [
+        "F7_super",
+        "apex_bridge"
+      ],
+      [
+        "L_coeff",
+        "apex_bridge"
+      ]
+    ],
+    "coefficient_ring_rule": "任何同調/上同調計算都必須顯式帶 Coeff；不同環必須走不同演算法（ℚ=有理秩、ℤ=SNF、F_p=模消元、ℤ/m=UCT）"
+  },
+  "gates": [
+    "moon test",
+    "moon run cmd/audit",
+    "moon run cmd/audit -- --coeff",
+    "sh ledger/audit.sh verify"
+  ],
+  "boundary_metrics": {
+    "B1": {
+      "mode": "transform",
+      "probe": "b1_probe"
+    },
+    "B2": {
+      "mode": "push+transform",
+      "probe": "b2_probe"
+    },
+    "B3": {
+      "mode": "breakthrough",
+      "probe": "b3_probe"
+    },
+    "B4": {
+      "mode": "push+transform+cure",
+      "probe": "b4_probe + g3_probe"
+    },
+    "B5": {
+      "mode": "dissolve+transform+cure",
+      "probe": "b5_probe + g5_probe"
+    },
+    "B6": {
+      "mode": "transform+push",
+      "probe": "b6_probe + cup_probe + bockstein_probe"
+    },
+    "B7": {
+      "mode": "transform",
+      "probe": "b7_probe"
+    }
+  },
+  "residual_policy": "scorecard().residual 為必填；空字串視為閘門失敗",
+  "root_causes": {
+    "G1": [
+      "B4",
+      "B6",
+      "B7"
+    ],
+    "G2": [
+      "B6"
+    ],
+    "G3": [
+      "B4"
+    ],
+    "G5": [
+      "B5"
+    ],
+    "note": "根因表：七條邊界中四條共享根因『表示所依附的環選錯』"
+  }
+}

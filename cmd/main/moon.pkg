@@ -1,0 +1,7 @@
+import {
+  "vv0101v01/golden" @lib,
+  "moonbitlang/core/env",
+  "moonbitlang/core/bench" @mbench,
+}
+
+pkgtype(kind: "executable")

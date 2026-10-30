@@ -1,0 +1,12 @@
+import {
+  "vv0101v01/golden/semiring/algebra" @alg,
+  "vv0101v01/golden/semiring/matrix" @mat,
+  "vv0101v01/golden/semiring/sim",
+}
+
+import {
+  "vv0101v01/golden/semiring/algebra" @alg,
+  "vv0101v01/golden/semiring/matrix" @mat,
+  "vv0101v01/golden/semiring/cat",
+  "vv0101v01/golden/semiring/sim",
+} for "wbtest"

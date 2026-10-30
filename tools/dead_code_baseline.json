@@ -1,0 +1,4 @@
+{
+ "ours": [],
+ "note": "第九輪：基線清空 —— 自家五個套件（bridge/higher/homotopy/opt/coeff）已無未引用 pub；任何新增都會讓 --check 失敗"
+}

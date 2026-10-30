@@ -1,0 +1,394 @@
+# ABORT-CONTRACTS：`abort(` 的逐站點契約表（自動生成）
+
+- 全樹 `abort(` 站點：**202**
+- 我們的五個套件（apex）：**0**（閘門要求 0）
+
+## 1. 依套件與類別
+
+| 套件 | 站點 | cap | precondition | invariant |
+|---|---|---|---|---|
+| `cmd` | 3 | 0 | 0 | 3 |
+| `scheme` | 25 | 0 | 25 | 0 |
+| `semiring` | 24 | 1 | 9 | 14 |
+| `symlib` | 98 | 10 | 73 | 15 |
+| `topos` | 52 | 0 | 44 | 8 |
+
+## 2. 公共 API 上的 precondition（下一輪要改成 `Result` 的清單）
+
+- `scheme/cycles_dual_points_categorify.mbt:179` **`weil_divisor_p1_normalize`** — weil_divisor_p1_normalize: empty merge stack
+- `scheme/cycles_dual_points_categorify.mbt:241` **`principal_divisor_p1`** — principal_divisor_p1: rational function must be nonzero and finite
+- `scheme/cycles_dual_points_categorify.mbt:592` **`plane_curve_line_bundle_cohomology`** — plane_curve_line_bundle_cohomology: degree must be >= 1
+- `scheme/cycles_dual_points_categorify.mbt:725` **`fcomm_fp`** — fcomm_fp: p must be >= 2
+- `scheme/derived_structural_theorems.mbt:138` **`kahler_differentials_module`** — kahler_differentials_module: invalid RingHom
+- `scheme/derived_structural_theorems.mbt:380` **`projective_hilbert_report`** — projective_hilbert_report: expected nvars >= 1
+- `scheme/derived_structural_theorems.mbt:492` **`blowup_plane_curve_at_origin`** — blowup_plane_curve_at_origin: expected nonzero 2-var polynomial
+- `scheme/derived_structural_theorems.mbt:601` **`fcomm_fp2`** — fcomm_fp2: expected odd prime p >= 3
+- `scheme/derived_structural_theorems.mbt:617` **`fcomm_fp2`** — fcomm_fp2: no non-residue found
+- `scheme/groebner_ideal.mbt:199` **`mpoly_from_terms`** — mpoly_from_terms: exponent length mismatch
+- `scheme/groebner_ideal.mbt:219` **`mpoly_from_terms`** — mpoly_normalize: empty merge stack
+- `scheme/groebner_ideal.mbt:257` **`mpoly_var`** — mpoly_var: index out of range
+- `scheme/groebner_ideal.mbt:282` **`mpoly_add`** — mpoly_add: nvars mismatch
+- `scheme/groebner_ideal.mbt:322` **`mpoly_mul`** — mpoly_mul: nvars mismatch
+- `scheme/groebner_ideal.mbt:341` **`mpoly_pow`** — mpoly_pow: negative exponent
+- `scheme/groebner_ideal.mbt:378` **`mpoly_eval`** — mpoly_eval: point dimension
+- `scheme/groebner_ideal.mbt:399` **`mpoly_subst`** — mpoly_subst: arity mismatch
+- `scheme/groebner_ideal.mbt:457` **`mpoly_leading_term`** — mpoly_leading_term: zero polynomial
+- `scheme/groebner_ideal.mbt:815` **`ideal_quotient_poly`** — ideal_quotient_poly: generator of I ∩ <f> not divisible by f
+- `scheme/groebner_ideal.mbt:930` **`mpoly_of_poly`** — mpoly_of_poly: variable index exceeds nvars
+- `scheme/scheme_morphisms_affine_proper.mbt:124` **`scheme_projective_subscheme`** — scheme_projective_subscheme: n must be >= 0
+- `scheme/scheme_morphisms_affine_proper.mbt:131` **`scheme_projective_subscheme`** — scheme_projective_subscheme: homog_gens nvars must be n + 1
+- `scheme/scheme_morphisms_affine_proper.mbt:443` **`scheme_morphism_compose`** — scheme_morphism_compose: codomain/domain mismatch
+- `scheme/scheme_morphisms_affine_proper.mbt:463` **`affine_fiber_product`** — affine_fiber_product: base ring mismatch
+- `scheme/sheafification_affine_reduced.mbt:131` **`ring_hom_compose`** — ring_hom_compose: intermediate ring mismatch
+- `semiring/cat/setmat.mbt:68` **`smat_mul`** — smat_mul: shape mismatch
+- `semiring/cat/setmat.mbt:104` **`smat_plus`** — smat_plus: shape mismatch
+- `semiring/matrix/mul.mbt:192` **`mul_trop_plain`** — mul_trop_plain: shape mismatch
+- `semiring/spline/spline.mbt:375` **`interp_cubic_dense`** — interp_cubic_dense: singular collocation matrix
+- `semiring/spline/spline.mbt:386` **`interp_cubic_banded`** — interp_cubic_banded: singular banded matrix
+- `semiring/spline/spline.mbt:402` **`interp_cubic_dense_open`** — interp_cubic_dense_open: singular
+- `semiring/trop/tla.mbt:131` **`trop_det_dp`** — trop_det_dp: n 太大（2^n 記憶體），請用 trop_det
+- `semiring/trop/tla.mbt:205` **`trop_det_bruteforce`** — trop_det_bruteforce: n ≤ 8
+- `semiring/trop/tla.mbt:224` **`trop_det_tie_count`** — trop_det_tie_count: n 太大
+- `symlib/action.mbt:42` **`FinAction`** — FinAction::new: negative size
+- `symlib/action.mbt:45` **`FinAction`** — FinAction::new: image size mismatch
+- `symlib/action.mbt:49` **`FinAction`** — FinAction::new: image out of range
+- `symlib/action.mbt:61` **`FinAction`** — FinAction::lift: base size mismatch
+- `symlib/action.mbt:179` **`FinAction`** — FinAction::orbit: point out of range
+- `symlib/action.mbt:285` **`FinAction`** — FinAction::burnside_orbit_count: base size mismatch
+- `symlib/bitvec.mbt:18` **`BitVec`** — BitVec::make: negative length
+- `symlib/bitvec.mbt:48` **`BitVec`** — BitVec::get: index out of range
+- `symlib/bitvec.mbt:57` **`BitVec`** — BitVec::set: index out of range
+- `symlib/bitvec.mbt:66` **`BitVec`** — BitVec::unset: index out of range
+- `symlib/bitvec.mbt:75` **`BitVec`** — BitVec::or_in_place: length mismatch
+- `symlib/bitvec.mbt:85` **`BitVec`** — BitVec::and_in_place: length mismatch
+- `symlib/bitvec.mbt:96` **`BitVec`** — BitVec::and_not_in_place: length mismatch
+- `symlib/bitvec.mbt:152` **`BitVec`** — BitVec::contains: length mismatch
+- `symlib/canon.mbt:127` **`colored_canonical_key`** — colored_canonical_key: color length mismatch
+- `symlib/cat.mbt:31` **`FinMap`** — FinMap::new: negative size
+- `symlib/cat.mbt:32` **`FinMap`** — FinMap::new: image length mismatch
+- `symlib/cat.mbt:35` **`FinMap`** — FinMap::new: image out of range
+- `symlib/cat.mbt:54` **`FinMap`** — FinMap::compose: domain mismatch
+- `symlib/cat.mbt:96` **`FinMap`** — FinMap::inverse: not an isomorphism
+- `symlib/cat.mbt:117` **`pow_obj`** — pow_obj: need 0 <= n <= 20
+- `symlib/cat.mbt:154` **`pow_mult`** — pow_mult: need 0 <= n <= 3
+- `symlib/cat.mbt:185` **`pow_monad_laws`** — pow_monad_laws: need 0 <= n <= 3
+- `symlib/fincat.mbt:244` **`diagram_new`** — diagram_new: object count
+- `symlib/fincat.mbt:245` **`diagram_new`** — diagram_new: morphism count
+- `symlib/fincat.mbt:248` **`diagram_new`** — diagram_new: image length
+- `symlib/fincat.mbt:252` **`diagram_new`** — diagram_new: image range
+- `symlib/fold.mbt:27` **`fold_graph`** — fold_graph: size mismatch
+- `symlib/graph.mbt:20` **`Graph`** — Graph::from_edges: negative order
+- `symlib/graph.mbt:30` **`Graph`** — Graph::from_edges: endpoint out of range
+- `symlib/graph.mbt:72` **`Graph`** — Graph::path: negative order
+- `symlib/graph.mbt:83` **`Graph`** — Graph::cycle: need n >= 3
+- `symlib/graph.mbt:94` **`Graph`** — Graph::complete: negative order
+- `symlib/graph.mbt:108` **`Graph`** — Graph::complete_bipartite: negative part
+- `symlib/graph.mbt:122` **`Graph`** — Graph::star: need n >= 1
+- `symlib/graph.mbt:133` **`Graph`** — Graph::hypercube: need 0 <= k <= 16
+- `symlib/graph.mbt:190` **`Graph`** — Graph::has_edge: vertex out of range
+- `symlib/graph.mbt:256` **`Graph`** — Graph::relabel: size mismatch
+- `symlib/group.mbt:296` **`PermGroup`** — PermGroup::new: generator size mismatch
+- `symlib/group.mbt:321` **`PermGroup`** — PermGroup::symmetric: need n >= 1
+- `symlib/group.mbt:334` **`PermGroup`** — PermGroup::cyclic: need n >= 1
+- `symlib/group.mbt:345` **`PermGroup`** — PermGroup::dihedral: need n >= 3
+- `symlib/group.mbt:402` **`PermGroup`** — PermGroup::orbit: point out of range
+- `symlib/group.mbt:437` **`PermGroup`** — PermGroup::stabilizer: point out of range
+- `symlib/gset.mbt:32` **`all_perms`** — all_perms: negative n
+- `symlib/lut.mbt:67` **`key_lut_pairs`** — key_lut_pairs: length mismatch
+- `symlib/lut.mbt:89` **`KeyLut`** — KeyLut::at: key not found
+- `symlib/marks.mbt:567` **`frobenius_reciprocity`** — frobenius_reciprocity: too many functions
+- `symlib/perm.mbt:18` **`Perm`** — Perm::identity: negative size
+- `symlib/perm.mbt:33` **`Perm`** — Perm::from_img: image out of range
+- `symlib/perm.mbt:34` **`Perm`** — Perm::from_img: not injective
+- `symlib/perm.mbt:45` **`Perm`** — Perm::from_cycles: cycle too short
+- `symlib/perm.mbt:50` **`Perm`** — Perm::from_cycles: point out of range
+- `symlib/perm.mbt:67` **`Perm`** — Perm::apply: point out of range
+- `symlib/perm.mbt:74` **`Perm`** — Perm::compose: size mismatch
+- `symlib/permset.mbt:21` **`permset`** — permset: generator size mismatch
+- `symlib/random.mbt:20` **`Graph`** — Graph::random: negative n
+- `symlib/random.mbt:37` **`Perm`** — Perm::random: negative n
+- `symlib/random.mbt:60` **`random_ints`** — random_ints: k must be positive
+- `symlib/yoneda.mbt:36` **`presheaf_new`** — presheaf_new: object count
+- `symlib/yoneda.mbt:37` **`presheaf_new`** — presheaf_new: morphism count
+- `symlib/yoneda.mbt:40` **`presheaf_new`** — presheaf_new: restriction length
+- `symlib/yoneda.mbt:44` **`presheaf_new`** — presheaf_new: restriction range
+- `symlib/yoneda.mbt:117` **`yoneda_extend`** — yoneda_extend: e out of range
+- `symlib/yoneda.mbt:330` **`comma_down`** — comma_down: missing identity
+- `symlib/yoneda.mbt:340` **`comma_down`** — comma_down: composition missing
+- `symlib/yoneda.mbt:349` **`comma_down`** — comma_down: composite arrow missing
+- `symlib/yoneda.mbt:408` **`comma_up`** — comma_up: missing identity
+- `symlib/yoneda.mbt:418` **`comma_up`** — comma_up: composition missing
+- `symlib/yoneda.mbt:426` **`comma_up`** — comma_up: composite arrow missing
+- `symlib/yoneda.mbt:449` **`lan`** — lan: functor/diagram mismatch
+- `symlib/yoneda.mbt:466` **`lan`** — lan: comma mismatch
+- `symlib/yoneda.mbt:801` **`coinduced_card`** — coinduced_card: need x >= 1
+- `topos/derived_structural_theorems.mbt:61` **`right_kan_presheaf`** — right_kan_presheaf: invalid FinFunctor
+- `topos/derived_structural_theorems.mbt:106` **`right_kan_presheaf`** — right_kan_presheaf: comma pullback index missing
+- `topos/derived_structural_theorems.mbt:125` **`right_kan_presheaf`** — right_kan_presheaf: restricted cone not in limit
+- `topos/derived_structural_theorems.mbt:268` **`open_subtopos_lt_operator`** — open_subtopos_lt_operator: implied sieve missing
+- `topos/derived_structural_theorems.mbt:309` **`closed_subtopos_lt_operator`** — closed_subtopos_lt_operator: union sieve missing
+- `topos/derived_structural_theorems.mbt:632` **`simplicial_cup_1_1`** — simplicial_cup_1_1: 1-cochain length mismatch
+- `topos/derived_structural_theorems.mbt:756` **`simplicial_cup_h1_h1_rank`** — simplicial_cup_h1_h1_rank: cup of 1-cocycles not a 2-cocycle
+- `topos/geometric_morphism_local_properties.mbt:125` **`inverse_image_presheaf`** — inverse_image_presheaf: lan_map failed
+- `topos/logic_classifying_categorify.mbt:321` **`geometric_normal_form`** — geometric_normal_form: formula outside geometric fragment
+- `topos/logic_classifying_categorify.mbt:649` **`build_propositional_classifying_topos`** — build_propositional_classifying_topos: num_props out of range
+- `topos/logic_classifying_categorify.mbt:699` **`build_propositional_classifying_topos`** — build_propositional_classifying_topos: closed theory missing
+- `topos/logic_classifying_categorify.mbt:725` **`build_propositional_classifying_topos`** — build_propositional_classifying_topos: root object missing
+- `topos/sheaf_ccc_omega.mbt:279` **`plus_construction`** — plus_construction: pullback arrow missing
+- `topos/sheaf_ccc_omega.mbt:291` **`plus_construction`** — plus_construction: class missing
+- `topos/sheaf_ccc_omega.mbt:311` **`plus_construction`** — plus_construction: unit class missing
+- `topos/sheaf_ccc_omega.mbt:476` **`presheaf_exponential`** — presheaf_exponential: restricted hom missing
+- `topos/sheaf_ccc_omega.mbt:495` **`presheaf_exponential`** — presheaf_exponential: id_u missing
+- `topos/sheaf_ccc_omega.mbt:559` **`exponential_curry`** — exponential_curry: transposed hom missing
+- `topos/sheaf_ccc_omega.mbt:701` **`subobject_classifier_sheaf`** — subobject_classifier_sheaf: pullback of closed sieve not closed
+- `topos/sheaf_ccc_omega.mbt:720` **`subobject_classifier_sheaf`** — subobject_classifier_sheaf: maximal sieve not closed
+- `topos/sheaf_ccc_omega.mbt:761` **`lawvere_tierney_of_site`** — lawvere_tierney_of_site: closure missing
+- `topos/sheaf_ccc_omega.mbt:856` **`characteristic_morphism`** — characteristic_morphism: morphism is not monic
+- `topos/sheaf_ccc_omega.mbt:889` **`characteristic_morphism`** — characteristic_morphism: sieve is not J-closed
+- `topos/site_presheaf.mbt:210` **`cat_slice`** — cat_slice: object out of range
+- `topos/site_presheaf.mbt:315` **`sieve_generate`** — sieve_generate: generator codomain mismatch
+- `topos/site_presheaf.mbt:357` **`sieve_pullback`** — sieve_pullback: arrow codomain mismatch
+- `topos/site_presheaf.mbt:375` **`sieve_inter`** — sieve_inter: target mismatch
+- `topos/site_presheaf.mbt:388` **`sieve_union`** — sieve_union: target mismatch
+- `topos/site_presheaf.mbt:413` **`sieve_heyting_implies`** — sieve_heyting_implies: target mismatch
+- `topos/site_presheaf.mbt:646` **`site_new`** — site_new: invalid Grothendieck topology
+- `topos/site_presheaf.mbt:720` **`presheaf_representable_with_table`** — presheaf_representable_with_table: object out of range
+- `topos/site_presheaf.mbt:750` **`presheaf_representable_with_table`** — presheaf_representable: composite missing
+- `topos/site_presheaf.mbt:806` **`presheaf_of_sieve`** — presheaf_of_sieve: not closed under res
+- `topos/site_presheaf.mbt:952` **`presheaf_pullback`** — presheaf_pullback: naturality violated
+- `topos/site_presheaf.mbt:996` **`presheaf_equalizer`** — presheaf_equalizer: naturality violated
+- `topos/site_presheaf.mbt:1110` **`presheaf_hom_compose`** — presheaf_hom_compose: codomain/domain mismatch
+- `topos/site_presheaf.mbt:1369` **`yoneda_elem_to_hom`** — yoneda_elem_to_hom: element out of range
+- `topos/stacks_cohomology_homotopy.mbt:492` **`build_circle_z2_torsor_stack`** — circle_z2_torsor_stack: invalid Z/2Z groupoid
+- `topos/stacks_cohomology_homotopy.mbt:506` **`build_circle_z2_torsor_stack`** — circle_z2_torsor_stack: invalid S^1 fiber groupoid
+- `topos/stacks_cohomology_homotopy.mbt:699` **`classify_group_torsor_cohomology`** — classify_group_torsor_cohomology: not a valid groupoid
+- `topos/stacks_cohomology_homotopy.mbt:702` **`classify_group_torsor_cohomology`** — classify_group_torsor_cohomology: expected 1-object groupoid BG
+- `topos/stacks_cohomology_homotopy.mbt:888` **`cohomology_dimensions`** — cohomology_dimensions: d^{k+1} ∘ d^k != 0
+- `topos/stacks_cohomology_homotopy.mbt:1406` **`classifying_nerve_of_poset`** — classifying_nerve_of_poset: category has non-identity cycles
+- `topos/stacks_cohomology_homotopy.mbt:1532` **`boundary_simplex_nerve`** — boundary_simplex_nerve: supported for 1 <= dim <= 4
+
+## 3. 我們的五個套件（必須為 0）
+
+`bridge`／`higher`／`homotopy`／`opt`／`coeff`：**0 個 abort**。
+
+第九輪把 `bridge` 的 18 處全部改成 `Option`／`Result`（見 `SPEC.md` §4.15.2）：`perm_wiring`、`signed_perm_wiring`、`perm_equiv`、`average_permutation_matrices`、`assignment_cost`、`tropical_optimal_assignments`、`tropical_matrix_symmetries`、`exact_permanent_int64`、`exact_determinant_int64`、`qpoly_tropicalize_padic`、`rat_padic_valuation`、`free_category_to_fincat`、`weighted_graph_report`、`semiring_graph_symmetry_projector`。
+
+## 4. golden 併入套件的完整清單
+
+### `cmd`
+
+- `cmd/main/main.mbt:100` (priv) `main` [invariant] — theorem registry failed
+- `cmd/showcase/main.mbt:65` (priv) `main` [invariant] — showcase failed
+- `cmd/showcase/main.mbt:84` (priv) `main` [invariant] — showcase failed
+
+### `scheme`
+
+- `scheme/cycles_dual_points_categorify.mbt:179` (pub) `weil_divisor_p1_normalize` [precondition] — weil_divisor_p1_normalize: empty merge stack
+- `scheme/cycles_dual_points_categorify.mbt:241` (pub) `principal_divisor_p1` [precondition] — principal_divisor_p1: rational function must be nonzero and finite
+- `scheme/cycles_dual_points_categorify.mbt:592` (pub) `plane_curve_line_bundle_cohomology` [precondition] — plane_curve_line_bundle_cohomology: degree must be >= 1
+- `scheme/cycles_dual_points_categorify.mbt:725` (pub) `fcomm_fp` [precondition] — fcomm_fp: p must be >= 2
+- `scheme/derived_structural_theorems.mbt:138` (pub) `kahler_differentials_module` [precondition] — kahler_differentials_module: invalid RingHom
+- `scheme/derived_structural_theorems.mbt:380` (pub) `projective_hilbert_report` [precondition] — projective_hilbert_report: expected nvars >= 1
+- `scheme/derived_structural_theorems.mbt:492` (pub) `blowup_plane_curve_at_origin` [precondition] — blowup_plane_curve_at_origin: expected nonzero 2-var polynomial
+- `scheme/derived_structural_theorems.mbt:601` (pub) `fcomm_fp2` [precondition] — fcomm_fp2: expected odd prime p >= 3
+- `scheme/derived_structural_theorems.mbt:617` (pub) `fcomm_fp2` [precondition] — fcomm_fp2: no non-residue found
+- `scheme/groebner_ideal.mbt:199` (pub) `mpoly_from_terms` [precondition] — mpoly_from_terms: exponent length mismatch
+- `scheme/groebner_ideal.mbt:219` (pub) `mpoly_from_terms` [precondition] — mpoly_normalize: empty merge stack
+- `scheme/groebner_ideal.mbt:257` (pub) `mpoly_var` [precondition] — mpoly_var: index out of range
+- `scheme/groebner_ideal.mbt:282` (pub) `mpoly_add` [precondition] — mpoly_add: nvars mismatch
+- `scheme/groebner_ideal.mbt:322` (pub) `mpoly_mul` [precondition] — mpoly_mul: nvars mismatch
+- `scheme/groebner_ideal.mbt:341` (pub) `mpoly_pow` [precondition] — mpoly_pow: negative exponent
+- `scheme/groebner_ideal.mbt:378` (pub) `mpoly_eval` [precondition] — mpoly_eval: point dimension
+- `scheme/groebner_ideal.mbt:399` (pub) `mpoly_subst` [precondition] — mpoly_subst: arity mismatch
+- `scheme/groebner_ideal.mbt:457` (pub) `mpoly_leading_term` [precondition] — mpoly_leading_term: zero polynomial
+- `scheme/groebner_ideal.mbt:815` (pub) `ideal_quotient_poly` [precondition] — ideal_quotient_poly: generator of I ∩ <f> not divisible by f
+- `scheme/groebner_ideal.mbt:930` (pub) `mpoly_of_poly` [precondition] — mpoly_of_poly: variable index exceeds nvars
+- `scheme/scheme_morphisms_affine_proper.mbt:124` (pub) `scheme_projective_subscheme` [precondition] — scheme_projective_subscheme: n must be >= 0
+- `scheme/scheme_morphisms_affine_proper.mbt:131` (pub) `scheme_projective_subscheme` [precondition] — scheme_projective_subscheme: homog_gens nvars must be n + 1
+- `scheme/scheme_morphisms_affine_proper.mbt:443` (pub) `scheme_morphism_compose` [precondition] — scheme_morphism_compose: codomain/domain mismatch
+- `scheme/scheme_morphisms_affine_proper.mbt:463` (pub) `affine_fiber_product` [precondition] — affine_fiber_product: base ring mismatch
+- `scheme/sheafification_affine_reduced.mbt:131` (pub) `ring_hom_compose` [precondition] — ring_hom_compose: intermediate ring mismatch
+
+### `semiring`
+
+- `semiring/algebra/group_star.mbt:99` (priv) `` [cap] — star_by_doubling: subgroup order too large
+- `semiring/algebra/group_star.mbt:109` (priv) `` [invariant] — star_by_iteration: unbounded order
+- `semiring/cat/setmat.mbt:68` (pub) `smat_mul` [precondition] — smat_mul: shape mismatch
+- `semiring/cat/setmat.mbt:104` (pub) `smat_plus` [precondition] — smat_plus: shape mismatch
+- `semiring/matrix/csr.mbt:174` (priv) `` [invariant] — csr_mul: shape mismatch
+- `semiring/matrix/csr.mbt:237` (priv) `` [invariant] — csr_mul_minplus: shape mismatch
+- `semiring/matrix/mul.mbt:21` (priv) `` [invariant] — mul_naive: shape mismatch
+- `semiring/matrix/mul.mbt:54` (priv) `` [invariant] — mul_ikj: shape mismatch
+- `semiring/matrix/mul.mbt:87` (priv) `` [invariant] — mul_blocked: shape mismatch
+- `semiring/matrix/mul.mbt:148` (priv) `` [invariant] — mul_trop_generic: shape mismatch
+- `semiring/matrix/mul.mbt:192` (pub) `mul_trop_plain` [precondition] — mul_trop_plain: shape mismatch
+- `semiring/matrix/mul_par.mbt:27` (priv) `` [invariant] — mul_rows_par: shape mismatch
+- `semiring/matrix/mul_par.mbt:70` (priv) `` [invariant] — closure_fw_par: matrix must be square
+- `semiring/matrix/star.mbt:69` (priv) `` [invariant] — closure: matrix must be square
+- `semiring/matrix/star.mbt:93` (priv) `` [invariant] — closure_lehmann: matrix must be square
+- `semiring/matrix/star.mbt:166` (priv) `` [invariant] — closure_blocked: matrix must be square
+- `semiring/matrix/star.mbt:254` (priv) `` [invariant] — closure_series: matrix must be square
+- `semiring/matrix/star.mbt:290` (priv) `` [invariant] — mat_plus: shape mismatch
+- `semiring/spline/spline.mbt:375` (pub) `interp_cubic_dense` [precondition] — interp_cubic_dense: singular collocation matrix
+- `semiring/spline/spline.mbt:386` (pub) `interp_cubic_banded` [precondition] — interp_cubic_banded: singular banded matrix
+- `semiring/spline/spline.mbt:402` (pub) `interp_cubic_dense_open` [precondition] — interp_cubic_dense_open: singular
+- `semiring/trop/tla.mbt:131` (pub) `trop_det_dp` [precondition] — trop_det_dp: n 太大（2^n 記憶體），請用 trop_det
+- `semiring/trop/tla.mbt:205` (pub) `trop_det_bruteforce` [precondition] — trop_det_bruteforce: n ≤ 8
+- `semiring/trop/tla.mbt:224` (pub) `trop_det_tie_count` [precondition] — trop_det_tie_count: n 太大
+
+### `symlib`
+
+- `symlib/action.mbt:42` (pub) `FinAction` [precondition] — FinAction::new: negative size
+- `symlib/action.mbt:45` (pub) `FinAction` [precondition] — FinAction::new: image size mismatch
+- `symlib/action.mbt:49` (pub) `FinAction` [precondition] — FinAction::new: image out of range
+- `symlib/action.mbt:61` (pub) `FinAction` [precondition] — FinAction::lift: base size mismatch
+- `symlib/action.mbt:179` (pub) `FinAction` [precondition] — FinAction::orbit: point out of range
+- `symlib/action.mbt:285` (pub) `FinAction` [precondition] — FinAction::burnside_orbit_count: base size mismatch
+- `symlib/bitvec.mbt:18` (pub) `BitVec` [precondition] — BitVec::make: negative length
+- `symlib/bitvec.mbt:48` (pub) `BitVec` [precondition] — BitVec::get: index out of range
+- `symlib/bitvec.mbt:57` (pub) `BitVec` [precondition] — BitVec::set: index out of range
+- `symlib/bitvec.mbt:66` (pub) `BitVec` [precondition] — BitVec::unset: index out of range
+- `symlib/bitvec.mbt:75` (pub) `BitVec` [precondition] — BitVec::or_in_place: length mismatch
+- `symlib/bitvec.mbt:85` (pub) `BitVec` [precondition] — BitVec::and_in_place: length mismatch
+- `symlib/bitvec.mbt:96` (pub) `BitVec` [precondition] — BitVec::and_not_in_place: length mismatch
+- `symlib/bitvec.mbt:152` (pub) `BitVec` [precondition] — BitVec::contains: length mismatch
+- `symlib/canon.mbt:127` (pub) `colored_canonical_key` [precondition] — colored_canonical_key: color length mismatch
+- `symlib/cat.mbt:31` (pub) `FinMap` [precondition] — FinMap::new: negative size
+- `symlib/cat.mbt:32` (pub) `FinMap` [precondition] — FinMap::new: image length mismatch
+- `symlib/cat.mbt:35` (pub) `FinMap` [precondition] — FinMap::new: image out of range
+- `symlib/cat.mbt:54` (pub) `FinMap` [precondition] — FinMap::compose: domain mismatch
+- `symlib/cat.mbt:96` (pub) `FinMap` [precondition] — FinMap::inverse: not an isomorphism
+- `symlib/cat.mbt:117` (pub) `pow_obj` [precondition] — pow_obj: need 0 <= n <= 20
+- `symlib/cat.mbt:124` (pub) `pow_fmap` [cap] — pow_fmap: set too large
+- `symlib/cat.mbt:143` (pub) `pow_unit` [cap] — pow_unit: set too large
+- `symlib/cat.mbt:154` (pub) `pow_mult` [precondition] — pow_mult: need 0 <= n <= 3
+- `symlib/cat.mbt:173` (pub) `pow_naturality` [cap] — pow_naturality: set too large
+- `symlib/cat.mbt:185` (pub) `pow_monad_laws` [precondition] — pow_monad_laws: need 0 <= n <= 3
+- `symlib/csp.mbt:24` (pub) `csp_limit` [cap] — csp_limit: domain product too large
+- `symlib/csp.mbt:67` (priv) `rec` [invariant] — csp_limit: too many solutions
+- `symlib/fincat.mbt:95` (priv) `add` [invariant] — cat_thin: object out of range
+- `symlib/fincat.mbt:244` (pub) `diagram_new` [precondition] — diagram_new: object count
+- `symlib/fincat.mbt:245` (pub) `diagram_new` [precondition] — diagram_new: morphism count
+- `symlib/fincat.mbt:248` (pub) `diagram_new` [precondition] — diagram_new: image length
+- `symlib/fincat.mbt:252` (pub) `diagram_new` [precondition] — diagram_new: image range
+- `symlib/fincat.mbt:307` (pub) `limit` [cap] — limit: diagram too large
+- `symlib/fincat.mbt:313` (priv) `rec` [invariant] — limit: too many cones
+- `symlib/fincat.mbt:425` (priv) `parallel_diagram` [invariant] — parallel_diagram: shape mismatch
+- `symlib/fincat.mbt:456` (priv) `cospan_diagram` [invariant] — cospan_diagram: shape mismatch
+- `symlib/fincat.mbt:481` (priv) `span_diagram` [invariant] — span_diagram: shape mismatch
+- `symlib/fold.mbt:27` (pub) `fold_graph` [precondition] — fold_graph: size mismatch
+- `symlib/graph.mbt:20` (pub) `Graph` [precondition] — Graph::from_edges: negative order
+- `symlib/graph.mbt:30` (pub) `Graph` [precondition] — Graph::from_edges: endpoint out of range
+- `symlib/graph.mbt:72` (pub) `Graph` [precondition] — Graph::path: negative order
+- `symlib/graph.mbt:83` (pub) `Graph` [precondition] — Graph::cycle: need n >= 3
+- `symlib/graph.mbt:94` (pub) `Graph` [precondition] — Graph::complete: negative order
+- `symlib/graph.mbt:108` (pub) `Graph` [precondition] — Graph::complete_bipartite: negative part
+- `symlib/graph.mbt:122` (pub) `Graph` [precondition] — Graph::star: need n >= 1
+- `symlib/graph.mbt:133` (pub) `Graph` [precondition] — Graph::hypercube: need 0 <= k <= 16
+- `symlib/graph.mbt:190` (pub) `Graph` [precondition] — Graph::has_edge: vertex out of range
+- `symlib/graph.mbt:256` (pub) `Graph` [precondition] — Graph::relabel: size mismatch
+- `symlib/group.mbt:75` (priv) `trans_at` [invariant] — trans_at: orbit/transversal invariant violated
+- `symlib/group.mbt:285` (priv) `sgs_build` [invariant] — sgs_build: worklist explosion
+- `symlib/group.mbt:296` (pub) `PermGroup` [precondition] — PermGroup::new: generator size mismatch
+- `symlib/group.mbt:321` (pub) `PermGroup` [precondition] — PermGroup::symmetric: need n >= 1
+- `symlib/group.mbt:334` (pub) `PermGroup` [precondition] — PermGroup::cyclic: need n >= 1
+- `symlib/group.mbt:345` (pub) `PermGroup` [precondition] — PermGroup::dihedral: need n >= 3
+- `symlib/group.mbt:402` (pub) `PermGroup` [precondition] — PermGroup::orbit: point out of range
+- `symlib/group.mbt:437` (pub) `PermGroup` [precondition] — PermGroup::stabilizer: point out of range
+- `symlib/group.mbt:485` (pub) `PermGroup` [cap] — PermGroup::elements: group too large to enumerate
+- `symlib/gset.mbt:32` (pub) `all_perms` [precondition] — all_perms: negative n
+- `symlib/gset.mbt:39` (priv) `rec` [invariant] — all_perms: too many
+- `symlib/lut.mbt:46` (priv) `key_lut_of` [invariant] — key_lut: zero key
+- `symlib/lut.mbt:67` (pub) `key_lut_pairs` [precondition] — key_lut_pairs: length mismatch
+- `symlib/lut.mbt:89` (pub) `KeyLut` [precondition] — KeyLut::at: key not found
+- `symlib/lut.mbt:106` (priv) `perm_key64` [invariant] — perm_key64: need n <= 12
+- `symlib/lut.mbt:120` (priv) `compose_key64` [invariant] — compose_key64: need n <= 12
+- `symlib/marks.mbt:567` (pub) `frobenius_reciprocity` [precondition] — frobenius_reciprocity: too many functions
+- `symlib/perm.mbt:18` (pub) `Perm` [precondition] — Perm::identity: negative size
+- `symlib/perm.mbt:33` (pub) `Perm` [precondition] — Perm::from_img: image out of range
+- `symlib/perm.mbt:34` (pub) `Perm` [precondition] — Perm::from_img: not injective
+- `symlib/perm.mbt:45` (pub) `Perm` [precondition] — Perm::from_cycles: cycle too short
+- `symlib/perm.mbt:50` (pub) `Perm` [precondition] — Perm::from_cycles: point out of range
+- `symlib/perm.mbt:67` (pub) `Perm` [precondition] — Perm::apply: point out of range
+- `symlib/perm.mbt:74` (pub) `Perm` [precondition] — Perm::compose: size mismatch
+- `symlib/permset.mbt:21` (pub) `permset` [precondition] — permset: generator size mismatch
+- `symlib/random.mbt:20` (pub) `Graph` [precondition] — Graph::random: negative n
+- `symlib/random.mbt:37` (pub) `Perm` [precondition] — Perm::random: negative n
+- `symlib/random.mbt:60` (pub) `random_ints` [precondition] — random_ints: k must be positive
+- `symlib/search.mbt:683` (priv) `initial_ranks_colored` [invariant] — search_graph_colored: color length mismatch
+- `symlib/yoneda.mbt:36` (pub) `presheaf_new` [precondition] — presheaf_new: object count
+- `symlib/yoneda.mbt:37` (pub) `presheaf_new` [precondition] — presheaf_new: morphism count
+- `symlib/yoneda.mbt:40` (pub) `presheaf_new` [precondition] — presheaf_new: restriction length
+- `symlib/yoneda.mbt:44` (pub) `presheaf_new` [precondition] — presheaf_new: restriction range
+- `symlib/yoneda.mbt:117` (pub) `yoneda_extend` [precondition] — yoneda_extend: e out of range
+- `symlib/yoneda.mbt:164` (pub) `yoneda_nats` [cap] — yoneda_nats: presheaf too large
+- `symlib/yoneda.mbt:330` (pub) `comma_down` [precondition] — comma_down: missing identity
+- `symlib/yoneda.mbt:340` (pub) `comma_down` [precondition] — comma_down: composition missing
+- `symlib/yoneda.mbt:349` (pub) `comma_down` [precondition] — comma_down: composite arrow missing
+- `symlib/yoneda.mbt:408` (pub) `comma_up` [precondition] — comma_up: missing identity
+- `symlib/yoneda.mbt:418` (pub) `comma_up` [precondition] — comma_up: composition missing
+- `symlib/yoneda.mbt:426` (pub) `comma_up` [precondition] — comma_up: composite arrow missing
+- `symlib/yoneda.mbt:449` (pub) `lan` [precondition] — lan: functor/diagram mismatch
+- `symlib/yoneda.mbt:466` (pub) `lan` [precondition] — lan: comma mismatch
+- `symlib/yoneda.mbt:473` (pub) `lan` [cap] — lan: too large
+- `symlib/yoneda.mbt:531` (priv) `comma_pullback` [invariant] — comma_pullback: morphism count
+- `symlib/yoneda.mbt:638` (priv) `obj_of_index` [invariant] — obj_of_index: out of range
+- `symlib/yoneda.mbt:746` (priv) `cone_key` [cap] — cone_key: entry too large
+- `symlib/yoneda.mbt:801` (pub) `coinduced_card` [precondition] — coinduced_card: need x >= 1
+- `symlib/yoneda.mbt:805` (pub) `coinduced_card` [cap] — coinduced_card: too large
+
+### `topos`
+
+- `topos/derived_structural_theorems.mbt:61` (pub) `right_kan_presheaf` [precondition] — right_kan_presheaf: invalid FinFunctor
+- `topos/derived_structural_theorems.mbt:106` (pub) `right_kan_presheaf` [precondition] — right_kan_presheaf: comma pullback index missing
+- `topos/derived_structural_theorems.mbt:125` (pub) `right_kan_presheaf` [precondition] — right_kan_presheaf: restricted cone not in limit
+- `topos/derived_structural_theorems.mbt:268` (pub) `open_subtopos_lt_operator` [precondition] — open_subtopos_lt_operator: implied sieve missing
+- `topos/derived_structural_theorems.mbt:309` (pub) `closed_subtopos_lt_operator` [precondition] — closed_subtopos_lt_operator: union sieve missing
+- `topos/derived_structural_theorems.mbt:632` (pub) `simplicial_cup_1_1` [precondition] — simplicial_cup_1_1: 1-cochain length mismatch
+- `topos/derived_structural_theorems.mbt:756` (pub) `simplicial_cup_h1_h1_rank` [precondition] — simplicial_cup_h1_h1_rank: cup of 1-cocycles not a 2-cocycle
+- `topos/geometric_morphism_local_properties.mbt:125` (pub) `inverse_image_presheaf` [precondition] — inverse_image_presheaf: lan_map failed
+- `topos/logic_classifying_categorify.mbt:321` (pub) `geometric_normal_form` [precondition] — geometric_normal_form: formula outside geometric fragment
+- `topos/logic_classifying_categorify.mbt:649` (pub) `build_propositional_classifying_topos` [precondition] — build_propositional_classifying_topos: num_props out of range
+- `topos/logic_classifying_categorify.mbt:699` (pub) `build_propositional_classifying_topos` [precondition] — build_propositional_classifying_topos: closed theory missing
+- `topos/logic_classifying_categorify.mbt:725` (pub) `build_propositional_classifying_topos` [precondition] — build_propositional_classifying_topos: root object missing
+- `topos/sheaf_ccc_omega.mbt:156` (priv) `restrict_matching_family` [invariant] — restrict_matching_family: not a subsieve
+- `topos/sheaf_ccc_omega.mbt:279` (pub) `plus_construction` [precondition] — plus_construction: pullback arrow missing
+- `topos/sheaf_ccc_omega.mbt:291` (pub) `plus_construction` [precondition] — plus_construction: class missing
+- `topos/sheaf_ccc_omega.mbt:311` (pub) `plus_construction` [precondition] — plus_construction: unit class missing
+- `topos/sheaf_ccc_omega.mbt:396` (priv) `yoneda_covariant_map` [invariant] — yoneda_covariant_map: missing composite
+- `topos/sheaf_ccc_omega.mbt:476` (pub) `presheaf_exponential` [precondition] — presheaf_exponential: restricted hom missing
+- `topos/sheaf_ccc_omega.mbt:495` (pub) `presheaf_exponential` [precondition] — presheaf_exponential: id_u missing
+- `topos/sheaf_ccc_omega.mbt:559` (pub) `exponential_curry` [precondition] — exponential_curry: transposed hom missing
+- `topos/sheaf_ccc_omega.mbt:701` (pub) `subobject_classifier_sheaf` [precondition] — subobject_classifier_sheaf: pullback of closed sieve not closed
+- `topos/sheaf_ccc_omega.mbt:720` (pub) `subobject_classifier_sheaf` [precondition] — subobject_classifier_sheaf: maximal sieve not closed
+- `topos/sheaf_ccc_omega.mbt:761` (pub) `lawvere_tierney_of_site` [precondition] — lawvere_tierney_of_site: closure missing
+- `topos/sheaf_ccc_omega.mbt:856` (pub) `characteristic_morphism` [precondition] — characteristic_morphism: morphism is not monic
+- `topos/sheaf_ccc_omega.mbt:889` (pub) `characteristic_morphism` [precondition] — characteristic_morphism: sieve is not J-closed
+- `topos/site_presheaf.mbt:210` (pub) `cat_slice` [precondition] — cat_slice: object out of range
+- `topos/site_presheaf.mbt:315` (pub) `sieve_generate` [precondition] — sieve_generate: generator codomain mismatch
+- `topos/site_presheaf.mbt:357` (pub) `sieve_pullback` [precondition] — sieve_pullback: arrow codomain mismatch
+- `topos/site_presheaf.mbt:375` (pub) `sieve_inter` [precondition] — sieve_inter: target mismatch
+- `topos/site_presheaf.mbt:388` (pub) `sieve_union` [precondition] — sieve_union: target mismatch
+- `topos/site_presheaf.mbt:413` (pub) `sieve_heyting_implies` [precondition] — sieve_heyting_implies: target mismatch
+- `topos/site_presheaf.mbt:646` (pub) `site_new` [precondition] — site_new: invalid Grothendieck topology
+- `topos/site_presheaf.mbt:720` (pub) `presheaf_representable_with_table` [precondition] — presheaf_representable_with_table: object out of range
+- `topos/site_presheaf.mbt:750` (pub) `presheaf_representable_with_table` [precondition] — presheaf_representable: composite missing
+- `topos/site_presheaf.mbt:806` (pub) `presheaf_of_sieve` [precondition] — presheaf_of_sieve: not closed under res
+- `topos/site_presheaf.mbt:952` (pub) `presheaf_pullback` [precondition] — presheaf_pullback: naturality violated
+- `topos/site_presheaf.mbt:996` (pub) `presheaf_equalizer` [precondition] — presheaf_equalizer: naturality violated
+- `topos/site_presheaf.mbt:1110` (pub) `presheaf_hom_compose` [precondition] — presheaf_hom_compose: codomain/domain mismatch
+- `topos/site_presheaf.mbt:1332` (priv) `search` [invariant] — presheaf_hom_enumerate: empty trail
+- `topos/site_presheaf.mbt:1369` (pub) `yoneda_elem_to_hom` [precondition] — yoneda_elem_to_hom: element out of range
+- `topos/stacks_cohomology_homotopy.mbt:492` (pub) `build_circle_z2_torsor_stack` [precondition] — circle_z2_torsor_stack: invalid Z/2Z groupoid
+- `topos/stacks_cohomology_homotopy.mbt:506` (pub) `build_circle_z2_torsor_stack` [precondition] — circle_z2_torsor_stack: invalid S^1 fiber groupoid
+- `topos/stacks_cohomology_homotopy.mbt:665` (priv) `nerve_edge_index` [invariant] — nerve_edge_index: missing boundary edge of simplex
+- `topos/stacks_cohomology_homotopy.mbt:680` (priv) `nerve_tri_index` [invariant] — nerve_tri_index: missing boundary triangle of simplex
+- `topos/stacks_cohomology_homotopy.mbt:699` (pub) `classify_group_torsor_cohomology` [precondition] — classify_group_torsor_cohomology: not a valid groupoid
+- `topos/stacks_cohomology_homotopy.mbt:702` (pub) `classify_group_torsor_cohomology` [precondition] — classify_group_torsor_cohomology: expected 1-object groupoid BG
+- `topos/stacks_cohomology_homotopy.mbt:789` (priv) `rect_qmat_mul` [invariant] — rect_qmat_mul: dimension mismatch
+- `topos/stacks_cohomology_homotopy.mbt:832` (priv) `rect_qmat_solve` [invariant] — rect_qmat_solve: rhs length
+- `topos/stacks_cohomology_homotopy.mbt:860` (priv) `rect_qmat_vec` [invariant] — rect_qmat_vec: length mismatch
+- `topos/stacks_cohomology_homotopy.mbt:888` (pub) `cohomology_dimensions` [precondition] — cohomology_dimensions: d^{k+1} ∘ d^k != 0
+- `topos/stacks_cohomology_homotopy.mbt:1406` (pub) `classifying_nerve_of_poset` [precondition] — classifying_nerve_of_poset: category has non-identity cycles
+- `topos/stacks_cohomology_homotopy.mbt:1532` (pub) `boundary_simplex_nerve` [precondition] — boundary_simplex_nerve: supported for 1 <= dim <= 4
+

@@ -1,0 +1,9 @@
+import {
+  "vv0101v01/golden/semiring/algebra" @alg,
+  "vv0101v01/golden/semiring/matrix" @mat,
+  "moonbitlang/core/math",
+}
+
+import {
+  "moonbitlang/core/math",
+} for "wbtest"

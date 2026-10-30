@@ -1,0 +1,13 @@
+// 平台擴充套件：只有 native 有檔案系統與 async runtime。
+// `supported_targets` 讓其他 target **整個跳過這個套件**，
+// 因此 `par/`（序列接縫）可以在四個 target 上零警告編譯。
+options(
+  supported_targets: "native",
+)
+
+import {
+  "vv0101v01/golden/semiring/par",
+  "moonbitlang/async",
+  "moonbitlang/async/fs",
+  "moonbitlang/core/bench",
+}

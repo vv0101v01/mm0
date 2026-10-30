@@ -1,0 +1,7 @@
+import {
+  "vv0101v01/golden/semiring/algebra" @alg,
+}
+
+import {
+  "vv0101v01/golden/semiring/algebra" @alg,
+} for "wbtest"

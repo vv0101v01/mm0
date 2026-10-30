@@ -1,0 +1,6 @@
+import {
+  "vv0101v01/golden/symlib",
+  "moonbitlang/core/bench",
+}
+
+pkgtype(kind: "executable")

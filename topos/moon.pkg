@@ -1,0 +1,5 @@
+import {
+  "moonbitlang/core/debug",
+  "vv0101v01/golden/exact/algebra" @exactalg,
+  "vv0101v01/golden/symlib" @sym,
+}

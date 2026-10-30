@@ -1,0 +1,11 @@
+import {
+  "moonbitlang/core/env",
+  "vv0101v01/golden/bridge",
+  "vv0101v01/golden/coeff",
+  "vv0101v01/golden/higher",
+  "vv0101v01/golden/homotopy",
+  "vv0101v01/golden/opt",
+  "vv0101v01/golden/super/sledger",
+}
+
+pkgtype(kind: "executable")

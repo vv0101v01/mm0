@@ -1,0 +1,127 @@
+0.2 ms  PASS  幂等 Hermitian 矩陣 P²=P, P†=P（正交投影）
+0.2 ms  PASS  特徵空間良構性 Cⁿ=im(P)⊕ker(P)，特徵值 1/0，正交分解
+0.1 ms  PASS  可交換投影相容性 PQ=QP ⇒ PQ 為投影（不交換者被檢出）
+1.5 ms  PASS  區間 De Morgan 律與面公式商（蘊含／等價可判定）
+5.4 ms  PASS  系統商：剪枝保商、聯集可交換、相容性保商、擴張可行性判定
+0.8 ms  PASS  立方體在區間上 comp：開盒填充邊界方程、面映射交換、路徑傳遞
+0.3 ms  PASS  特徵空間 Kan 纖維化剪枝：P∘fill 保持邊界並落入 im(P)
+0.4 ms  PASS  NbE 單值性：nf(nf t)=nf t，定義相等由正規形判定
+0.0 ms  PASS  coe 定義相等：coe^refl ≡ id，coe^(ua swap) ≡ swap（NbE）
+0.2 ms  PASS  HOAS 同構：往返一周 = NbE 正規形，正規形上嚴格相等
+0.6 ms  PASS  同構即相等 ua：Iso→Equiv→Path，coe 計得 equivFun（wiring 符號驗證）
+0.2 ms  PASS  PathP 積交換：swap∘(e₁×e₂)=(e₂×e₁)∘swap；PathP 積分解往返
+0.5 ms  PASS  Glue 可靠性：φ ⊢ equivFun(partial)=unglue；不相容 glue 被拒
+0.1 ms  PASS  J 計算規則與往返：J(refl)=d 且沿 p、sym p 往返回 d
+0.1 ms  PASS  往返正交：常值族 transport 在 im(P)⊕ker(P) 分量正交且往返恆等
+0.7 ms  PASS  NbE 加 η：函數/積/單位 η 長正規形，swap∘swap ≡ id（函數層面）
+0.2 ms  PASS  符號判定：面公式 ROBDD 規範形（sat/≤/≡ 不再枚舉 2ⁿ）
+0.1 ms  PASS  符號判定：有限等價 wiring 規範形（置換性、合成、逆，範疇＋相干性）
+4.1 ms  PASS  一般 Glue comp：有限等價線端點算法＋子空間線開盒 hcomp 校正
+26.6 ms  PASS  範疇化：Karoubi／面偏序／立方體範疇／句法笛卡兒閉範疇律
+10.1 ms  PASS  規格登記健全：逐條範形/範疇/判定齊備，名稱與符號不重複
+9.8 ms  PASS  依賴 NbE：Π/Σ 與累積宇宙 Typeᵢ，依賴代入與型別導向轉換/η
+4.2 ms  PASS  Kan 結構全型別化：Π/Σ/Universe 的 coe/comp 遞迴，連同 LTy/Ty/子空間/Glue
+50.9 ms  PASS  完全符號代數：特徵多項式、譜投影 Lagrange 公式恆等、仿射唯一填充恆等
+3.6 ms  PASS  立方 AST：PathP、Nat/List 與 Circle/Torus 的語法、檢查、NbE 及依賴消去
+4.6 ms  PASS  Kan 項構造子：coe/comp/hcomp/hfill 與多分支系統在 AST 中計算，hcompU 產生 Glue
+3.1 ms  PASS  hcomp 按型別化簡：Π 反變、Σ 沿填充、Path 端點分支、資料構造子、HIT 形式點與 Universe
+13.7 ms  PASS  語義系統重構：持久共享環境、惰性求值、語義快取、DSystem 按值合併排序與多分支 Glue
+30.2 ms  PASS  通用歸納族生成器：telescope、嚴格正性、Nat/Bool/List/Vec/Fin/Tree/W 的檢查、消去與 comp
+12.3 ms  PASS  通用 HIT 生成器：0/1/2 維 cells、face 化簡、巢狀 PathP 消去、Circle/Segment/Torus 與同 cell comp
+38.0 ms  PASS  Schema 擴展：結構化正性、容器函子巢狀/互歸納/歸納遞迴、商 HIT、宇宙多態與任意維 cells
+3.0 ms  PASS  原始 DSystem：面相對轉換判定相容性，first-match 系統有精確不交範形
+8.0 ms  PASS  AST 一等 Equiv：Equiv/ua/GlueEquiv 的檢查、轉換、引文與 Kan 計算
+6.9 ms  PASS  受檢查型別線與 schema 註冊：維度代換封閉、驗證與 telescope elaboration 快取
+72.1 ms  PASS  精確代數擴展：廣義特徵空間、Jordan 分解、代數數與根式範形
+926.5 ms  PASS  BDD DAG 與認證數值：hash-consing/預算/DPLL，精確投影與多項式填充證書
+5.2 ms  PASS  球面 S³：S¹ 兩次懸掛 HIT，meridian 端點、依賴消去與 hcomp
+35.1 ms  PASS  Jacobi 譜迭代：每次酉旋轉的符號區間包含證書與 Gershgorin 特徵區間
+2.1 ms  PASS  高階合一 elaborator：Miller pattern 求解隱含引數與 Nat motive，核心編譯至 DTerm
+1.6 ms  PASS  參數化模組：函子實例化抽象整段宣告，import/open/alias/rename 與歧義拒絕
+3.2 ms  PASS  立方體演算法：transport/filler、路徑代數、funext、subst 與 Kan box
+37.3 ms  PASS  計算性單值性：ua/pathToEquiv、uaβ、兩條往返同倫與 Glue 方塊
+855.7 ms  PASS  精確代數完備化：Q 因式分解、實複根隔離、分裂域、去巢與任意精度 Jacobi
+5.6 ms  PASS  Schema 第九期：一等宇宙多態、透明算子正性、非均勻巢狀、原始互歸納、同時歸納遞迴與 HIT 移動維度
+3.5 ms  PASS  原始 DSystem 第九期：面下剪枝轉換、合意區域、受限修復與命題截斷
+1.7 ms  PASS  等價相干資料：improved counit、adjoint 三角形型別、fiber center、singleton 收縮與 GlueEquiv 引文保真
+1.5 ms  PASS  維度代換與持久註冊：裸 DLine／語義封閉代換、bucket hash-cons、snapshot/merge/manifest
+15.7 ms  PASS  一般代數認證與 BDD DAG 原生操作：任意擴張投影／路徑、DAG eval/count/quantify 與 DPLL 總判定
+10.9 ms  PASS  球面同倫代表元：懸掛函子、整數度數映射、單位環路、極交換 S³ 等價資料與 Hopf 連結數
+0.2 ms  PASS  非 Miller HOU 片斷：重複變量、構造子 spine、相異 flex-flex 交集與受限同頭情形
+5.4 ms  PASS  模組分離編譯：抽象宣告、已編譯介面連結、前綴特化與增量快取
+43.2 ms  PASS  一般 adjointification 與可收縮纖維：任意 quasi-inverse 的 lemIso 收縮與自動三角形
+1.0 ms  PASS  有界 Huet 高階合一搜尋：imitation、projection、任意 rigid spine、同頭置換剪枝與交易式預算
+7.2 ms  PASS  穩定模組二進位格式：版本標頭、checksum、全 DTerm/schema codec、解析驗證與連結
+8.0 ms  PASS  極端成本優化：BDD sifting/cache、watched-literal DPLL 與 Karatsuba 精確多項式乘法
+26.7 ms  PASS  核內整數與球面環路代表元：IntegerS、π₃ 商型別、懸掛環路生成元與代表元範式分類
+7.4 ms  PASS  Schema 跨家族函子與同時 IR 編譯：DFunctorFamily 巢狀實例化、gather 驗證與 simultaneous→decode 位置編譯
+4.1 ms  PASS  原始 DSystem 面值合意與精確修復：雙端點合意面、exact repair、宿主不透明立方開盒與多項式立方填充
+35.2 ms  PASS  lemIso 一般點驗證與圓環面點值合成：中性點與中性路徑兩端的收縮、Circle/Torus De Morgan 點合成計算
+3.2 ms  PASS  註冊字節持久化與全域 hash-consing：CHREGBIN 往返與拒絕損壞、DTerm intern 子項共享且檢查/正規形不變
+63.9 ms  PASS  精確代數第十一期：自適應 mod-p 因式圖樣剪枝、雙二次域去巢與判等、Jacobi 特徵值簇分離
+63.5 ms  PASS  CDCL 子句學習與 BDD 精確最佳順序：1-UIP 斷言子句、Luby 重啟、全排列最優變量序恰勝啟發式
+89.5 ms  PASS  圓的 encode/decode：helix 萬有覆疊（base↦ℤ、loop↦ua succ）、subst 繞數、整數消去環路冪與代表元往返轉換
+4.8 ms  PASS  HOU 搜尋擴展與模組交錯遷移：深 imitation 與 identification、import/本地宣告交錯、v1→v2 遷移與 artifact store
+236.2 ms  PASS  第十二期 BDD/SAT：子集 DP 精確最佳變量序（n≤12）、CDCL LBD 子句刪除與 RUP 可驗證證明
+3.7 ms  PASS  第十二期 Schema：DFunctorSelfFamily 同規格非均勻遞迴（Bush）、真實 Self 參數型別、不透明算子正性宣告
+75.9 ms  PASS  第十二期同時 IR eliminator 編譯：互賴函數塊編為同一 base 家族的 eliminator 閉項（函數層級嚴格低於 base 層級）
+1.2 ms  PASS  第十二期 DSystem：相關維度結構合意剪枝、exact repair 候選分支補入
+2.8 ms  PASS  第十二期轉換與路徑合成：Bool 變量 case-split 轉換、Circle/Torus 路徑值 comp（一般座標讀法保留繞數）
+5.9 ms  PASS  第十二期持久層與版本協商：抽象 artifact repository 原子提交與損壞復原、CHMODBIN v3/CHREGBIN v2 共享 DAG codec、peer 版本協商
+296.9 ms  PASS  第十二期精確代數：不可約證書 fast path（Eisenstein 平移）、三次與三二次塔體、Jacobi 迭代內簇感知精化
+0.7 ms  PASS  第十二期 HOU 語意：Miller pattern 主合一子（MGU）、無合一子與殘留約束三態
+115.7 ms  PASS  第十二期宿主立方分層外延檢查：面內部、對角與連接層探針與分層開盒驗證
+696.7 ms  PASS  第十二期球面代表元 3-胞與精確 Hopf：環路單位律連接旋轉 3-胞、Hopf 恆等式精確有理驗證
+0.3 ms  PASS  第十三期 Schema 正性：SelfFamily 同規格自嵌參數嚴格正性以最小不動點判定，Bush 通過、phantom 不出現、深層負性傳播
+384.8 ms  PASS  第十三期同時 IR 巢狀 foreign IH：積／函數／積含 List 的 foreign bundle 經項層函子映射搬運並與同步語義一致
+1.1 ms  PASS  第十三期面下轉換相關維度下降：在合取八變量 parity 面下僅沿實際提及的 i9 探測，i9 自由時正確拒絕
+4.9 ms  PASS  第十三期 DSystem 最大相容補入：exact-restrict 後以相容圖最大團找出大小 3 最大集，勝過順序貪心的大小 2
+4.4 ms  PASS  第十三期 Circle/Torus 非點值 comp：逐候選驗證座標帽，方塊在 tube 面轉換為原 loop、端點閉合且內部為點值
+0.2 ms  PASS  第十三期差異導引 Bool case-split：由兩側範形差異只切分真正不同的一個 Bool 變量，錯誤候選仍拒絕
+1.9 ms  PASS  第十三期 intern DAG 與位元組共圖：同一 DAG 經 CHDAGBIN 往返並逐節點匯入，第二次匯入新增 0、畸形前向邊預先拒絕
+1.8 ms  PASS  第十三期聯合不可約證書：mod 2 的 [1,3] 與 mod 3 的 [2,2] 合併排除一次／二次因式，證書可攜帶且獨立重驗
+26.1 ms  PASS  第十三期多二次塔體：至多四個平方類獨立生成元的 16 維 Q 體、基底對齊、逆元、精確判號、同域與加一根開方
+53242.1 ms  PASS  第十三期精確最佳 BDD 順序：增量 cofactor 子集 DP 擴至 n≤16，14 變量例 tried=114688，17 變量明示非精確
+1706.5 ms  PASS  第十三期 CDCL DRUP：學習／刪除步驟在演進子句庫上時序核驗，已刪子句不可再用，PHP(6,5) 與 PHP(7,6) 證明對帳
+2.6 ms  PASS  第十三期宿主立方分層 Tier D：逐軸深層連接探針揭穿舊層同形異值的立方，二維相等對共 105 探針
+5.3 ms  PASS  第十三期自適應 Jacobi：包絡停滯時切換精確特徵多項式 Sturm 分離，仍以目標寬度分開 ±1/4096
+2562.8 ms  PASS  第十三期環路代數與球面分類：逆元、結合律與 sym 複合反同態 3-胞，閉代表式遞迴正規化至其次數典範字
+0.4 ms  PASS  第十三期 HOU 殘差求解器：principal MGU 傳播與 transactional 迭代加深搜尋交錯續解整個殘留約束集
+1.8 ms  PASS  第十三期工件 manifest 完整性鏈：put/remove 以前條摘要連結成鏈，舊鏈頭、竄改與重播皆拒，銷毀 index 後以信任錨鏈頭復原
+0.1 ms  PASS  第十四期可攜正性見證證書：定義展開核驗 DPositivityWitness，雙重否定非嚴格正性與負性偽證均被拒絕
+95.2 ms  PASS  第十四期聯合 Σ 動機同時歸納遞迴：DFunctorSum 餘積函子與循環互遞迴小值域編譯至依賴核心並通過正規形核驗
+2.6 ms  PASS  第十四期 DSystem 全體最大相容集與有限型別分案轉換：無順序偏倚列舉全部最大團，Fin3 閉居留元自動分案並排除無限 Nat
+1.0 ms  PASS  第十四期語義圓周纏繞正規化與解耦環面 comp：loop·sym(loop) 語義歸零，T² 雙座標獨立選擇閉合方塊
+1.2 ms  PASS  第十四期增量 DAG 差分與跨格式共圖封包：CHDAGDLT 僅傳新增節點並驗基底摘要，CHSHRBUN 跨模組與註冊表共享項表
+26.3 ms  PASS  第十四期 Hensel 提升有理因式分解：Swinnerton-Dyer 四次式與高次多項式經 p-adic 提升分解並攜無平方自由證書重驗
+288.0 ms  PASS  第十四期一般實代數根式與六生成元多二次塔：∛2、∜5、∛(1+√2) 精確算術判號與 64 維 Q(√2,…,√13) 逆元核驗
+9.2 ms  PASS  第十四期 Hermitian 分塊降維與高重數特徵認證：精確特徵多項式無平方分解結合 Sturm 根計數認證重數 [2,1,1]
+32.9 ms  PASS  第十四期 BDD 下界剪枝與 CDCL DRAT／DRUP 精簡：18 變量交錯公式剪枝壓縮，八子句純 RAT 步驟核驗與後向刪除精簡
+2.4 ms  PASS  第十四期高維宿主立方 P¹(F₈) 覆蓋陣列探測：729 列三階正交覆蓋陣列揭穿 5 維三軸耦合不等價立方
+707.4 ms  PASS  第十四期 Eckmann–Hilton 交換 3-胞與 Mac Lane 五邊形 4-胞：Ω²(S²) 二階環路交換同倫與四重結合兩路徑相干連通
+11091.0 ms  PASS  第十四期圓周內部截面族與單值 Hopf 不變量：中性整數 encode(decode(n))=n 截面，S²→Type₀ Hopf 纖維化算出次數 0,1,-1,2
+0.9 ms  PASS  第十四期跨約束回溯 HOU 與完備正規形枚舉：非 pattern 雙約束回溯避開衝突投影，有界窮盡枚舉全部正規形合一子
+3.6 ms  PASS  第十四期 TLV 前向相容封裝與鑑別式 CAS 增量同步：未知非關鍵區段安全略過、關鍵區段拒絕，MAC 鏈防偽與增量同步僅傳缺頁
+93.4 ms  PASS  第十五期對稱軌道 BDD 最優序與連通分量分解：19 變量軌道剪枝精確最佳化，28 變量四分量加性下界精確分解並誠實拒絕 22 變量單鏈
+163.2 ms  PASS  第十五期 CDCL LRAT 索引證明精煉與零搜尋核驗：PHP(6,5) 與八子句 RAT 編譯為 CHLRATBN v1，錯序提示與重用已刪子句皆拒
+15.6 ms  PASS  第十五期四階 PHF 覆蓋陣列與立方 Yoneda 外延審計：10 維四軸耦合偽立方揭穿、預層自然性檢驗與 24 維 CheckedDCube 單探針判等
+24900.7 ms  PASS  第十五期全滿單射雙向一般性核驗與圓基本群同構：開放反射變數認證 Ω¹(S¹)≃ℤ、萬有覆疊與 π₁(S¹)=‖Ω¹(S¹)‖₀≃ℤ，偽 refl 逆元皆拒
+246.6 ms  PASS  第十五期多態懸掛與環路—懸掛伴隨雙向等價：SuspS(BoolS)≃S¹、無基點餘錐與開放帶點脈絡 Map*(SuspS A,B)≃Map*(A,ΩB)
+13346.3 ms  PASS  第十五期一般 Freudenthal 懸掛定理與楔連通延拓：開放 0-連通脈絡認證 ‖Ω¹(SuspS A)‖₀≃1（含 π₁(S²)≃1、π₁(S³)≃1）、S¹∨S¹→S¹×S¹ 延拓與 Hopf 往返
+9.0 ms  PASS  第十六期大宇宙累積同時 IR、Dybjer–Setzer 開放同時 IR 與語義容器正性憑證：跨宇宙聯合動機編譯、多解碼器開放規約與反循環容器同構核驗
+19.3 ms  PASS  第十六期 DSATUR 著色上界最大團修復與高維 0~1 黏合圓／環面開盒合成：飽和度上界剪枝、二維圓與環面黏合方塊轉換及二上循環纏繞阻礙拒絕
+58.6 ms  PASS  第十六期標準 SHA-256/512、RFC 8032 Pure-Ed25519 非對稱封緘與崩潰一致 WAL 日誌：NIST/RFC 向量逐位核驗、CHARTSIG 防偽與 CHWALJRN 斷尾回滾恢復
+18097.4 ms  PASS  第十六期精確有理 LLL 格約化、Van Hoeij 跡格因式重組與 Q̄⊂ℂ Rouché 圓盤代數閉包：八次 Swinnerton-Dyer 因式重組與非實複代數根算術及韋達恆等式
+47848.7 ms  PASS  第十六期纖維化環路序列等價、開放變量 Hopf–Freudenthal 收縮與五維 Stasheff K₅ 相干胞：開放脈絡 ∂_Hopf(σ_{S²}(p))≡p、π₂(S²) 分裂收縮 ℤ 與 K₅ 南北半球五維填充
+7.1 ms  PASS  第十六期 Huet 延遲 flex-flex 約束圖、拉取式惰性合一串流、模組 DAG 介面雜湊重連結與三方倉庫合併：按需枚舉、不透明實作零重編譯重連結與 LCA 三方衝突判定
+
+total 179042.1 ms；passed 116/116
+最慢 8 條：
+  53242.1 ms  第十三期精確最佳 BDD 順序：增量 cofactor 子集 DP 擴至 n≤16，14 變量例 tried=114688，17 變量明示非精確
+  47848.7 ms  第十六期纖維化環路序列等價、開放變量 Hopf–Freudenthal 收縮與五維 Stasheff K₅ 相干胞：開放脈絡 ∂_Hopf(σ_{S²}(p))≡p、π₂(S²) 分裂收縮 ℤ 與 K₅ 南北半球五維填充
+  24900.7 ms  第十五期全滿單射雙向一般性核驗與圓基本群同構：開放反射變數認證 Ω¹(S¹)≃ℤ、萬有覆疊與 π₁(S¹)=‖Ω¹(S¹)‖₀≃ℤ，偽 refl 逆元皆拒
+  18097.4 ms  第十六期精確有理 LLL 格約化、Van Hoeij 跡格因式重組與 Q̄⊂ℂ Rouché 圓盤代數閉包：八次 Swinnerton-Dyer 因式重組與非實複代數根算術及韋達恆等式
+  13346.3 ms  第十五期一般 Freudenthal 懸掛定理與楔連通延拓：開放 0-連通脈絡認證 ‖Ω¹(SuspS A)‖₀≃1（含 π₁(S²)≃1、π₁(S³)≃1）、S¹∨S¹→S¹×S¹ 延拓與 Hopf 往返
+  11091.0 ms  第十四期圓周內部截面族與單值 Hopf 不變量：中性整數 encode(decode(n))=n 截面，S²→Type₀ Hopf 纖維化算出次數 0,1,-1,2
+  2562.8 ms  第十三期環路代數與球面分類：逆元、結合律與 sym 複合反同態 3-胞，閉代表式遞迴正規化至其次數典範字
+  1706.5 ms  第十三期 CDCL DRUP：學習／刪除步驟在演進子句庫上時序核驗，已刪子句不可再用，PHP(6,5) 與 PHP(7,6) 證明對帳

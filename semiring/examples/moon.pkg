@@ -1,0 +1,17 @@
+import {
+  "vv0101v01/golden/semiring/algebra" @alg,
+  "vv0101v01/golden/semiring/graph",
+  "vv0101v01/golden/semiring/matrix" @mat,
+  "vv0101v01/golden/semiring/monoid" @mon,
+  "vv0101v01/golden/semiring/par",
+  "vv0101v01/golden/semiring/ratelimit" @rl,
+  "vv0101v01/golden/semiring/spline",
+  "vv0101v01/golden/semiring/trop",
+  "vv0101v01/golden/semiring/nf",
+  "vv0101v01/golden/semiring/cat",
+  "vv0101v01/golden/semiring/app",
+  "vv0101v01/golden/semiring/bp",
+}
+
+import {
+} for "wbtest"

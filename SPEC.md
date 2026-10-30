@@ -2421,7 +2421,7 @@ python3 tools/audit_spec.py --check
 | 項目 | 值 |
 |---|---|
 | 遠端 | `https://github.com/vv0101v01/mm0`（分支 `main`） |
-| 提交 | `5d47031` |
+| 提交 | `d1cd19d`（樹 `5d47031` ＋ 文檔） |
 | 檔案數 | **354**（267 個 `.mbt` ＋ 文檔／工具／帳本／日誌） |
 | 樹大小 | 6.2 MB（工作目錄 268 MB —— 差額全在 `_build/`／`.mooncakes/`） |
 | 排除 | `_build/`、`.mooncakes/`、`*.mbti`（`.gitignore` 明列） |

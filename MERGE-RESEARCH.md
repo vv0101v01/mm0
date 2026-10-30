@@ -1237,7 +1237,7 @@ B4 壞素數不可消除、B5 ANF 稀疏性爆炸、B6 Hurewicz 只到 π₂、B
 git init && git add -A && git commit -m "..." && git push -u origin main
 ```
 
-**結果**：`https://github.com/vv0101v01/mm0`、分支 `main`、提交 `5d47031`、**354 個檔案／6.2 MB**。
+**結果**：`https://github.com/vv0101v01/mm0`、分支 `main`、提交 `d1cd19d`（樹 `5d47031`）、**354 個檔案／6.2 MB**。
 `.gitignore` 排除 `_build/`（268 MB 的工作目錄裡有 260 MB 是它）、`.mooncakes/`、`*.mbti`。
 
 **冷啟動驗證**：另開空目錄 `git clone`，重跑全部閘門 —— `moon check --deny-warn` 131 tasks 0/0、

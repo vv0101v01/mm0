@@ -1274,7 +1274,33 @@ unused `pub` in our packages **3 → 0**; `abort` in our packages **18 → 0**.
 **Verdict: all four debt classes settled and gated; the apex has no `abort` and no dead code;
 the 151 golden public preconditions are an explicit P0 work item.**
 
-#### 4.15.8 What this round taught
+#### 4.15.8 The push, and a cold-start check
+
+What was pushed is exactly the merged tree (**only the synthesized final form**):
+
+| Item | Value |
+|---|---|
+| Remote | `https://github.com/vv0101v01/mm0` (branch `main`) |
+| Commit | `5d47031` |
+| Files | **354** (267 `.mbt` plus docs / tools / ledger / logs) |
+| Tree size | 6.2 MB (versus 268 MB in the working directory — the difference is `_build/` and `.mooncakes/`) |
+| Excluded | `_build/`, `.mooncakes/`, `*.mbti` (listed explicitly in `.gitignore`) |
+| Not pushed | the original `golden/` and `notebook/` repositories — their content is already inside this tree, so pushing them would duplicate old files |
+
+**Cold-start verification — not "it runs here" but "it runs after a clone"**: from an empty directory,
+
+```text
+moon check --deny-warn        131 tasks, 0 error / 0 warning
+moon test                     192 / 192
+doc_audit / arch_check        DOC_OK / ARCH_OK (41 / 13 / 103)
+dead_code / abort_audit       DEAD_CODE_OK / ABORT_OK
+ledger verify                 VERIFY ok=true records=36
+```
+
+everything reproduces. **The acceptance criterion for a push is that someone else's clone measures the
+same numbers — not that the upload succeeded.**
+
+#### 4.15.9 What this round taught
 
 - **Deduplication is an equivalence test.** Two `binom`s were green separately and failed together.
 - **A gate must be able to say "cleared"**: moving the baseline from 3 to 0 is what prevents regression;

@@ -248,3 +248,12 @@ python3 tools/arch_check.py                # v3：七聯邦 + apex（含 L_coeff
    忘記還原會讓 `ledger/audit.sh emit()` 把報告文字寫進帳本（第三輪的舊事故會重演）。
 9. **加新套件依賴會改變 `internal_edges`**（本輪 95 → 103，因為去重讓 6 個套件新增 `exact/algebra` 邊）。
    `arch_check.py --graph` 的數字要跟著文檔更新，否則「可重跑」就變成「跑出來不一樣」。
+
+## 推送前的檢查（第十條之後）
+
+10. **`.gitignore` 要明列 `_build/`、`.mooncakes/`、`*.mbti`**。工作目錄 268 MB，實際樹只有 6.2 MB；
+    推錯一次，repo 就永久多背 260 MB（而且 `git rm` 之後歷史還在）。
+11. **推送的驗收是「clone 後重跑」**：另開空目錄 `git clone` → `moon check --deny-warn` →
+    `moon test` → 四支審計器 → `ledger verify`。本輪的 131 tasks／192 tests／VERIFY 36 條都在 clone 上重現過。
+    只跑 `git push` 成功不算完成。
+12. **`.git/config` 裡不要留帶 token 的 remote**：推完立刻 `git remote set-url` 回乾淨 URL。

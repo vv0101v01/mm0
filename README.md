@@ -1,5 +1,7 @@
 # golden × notebook — 合併後單一模組 `vv0101v01/golden`
 
+`https://github.com/vv0101v01/mm0` · 提交 `5d47031` · 267 個 `.mbt`／155,058 行 · 41 套件／13 聯邦 · `moon test` 192/192
+
 兩個 MoonBit 庫合併成**一棵樹**：`golden`（cubical-hermitian：精確代數、立方型／Kan 填充、topos／概形）
 ×  `notebook`（tensorlab：模消元、半環、有限範疇／置換群）。
 外加一層新寫的 `bridge/`，把 `SPEC.md` §四 的**七項能力邊界**變成可重跑的量測，
@@ -81,7 +83,7 @@ tools/             arch_check / doc_audit / dead_code / abort_audit（四支審�
 |---|---|
 | `SPEC.md` / `SPEC.en.md` | **規格與工程記錄**（含 §4.15 專案現況、七邊界瓶頸、未完成待辦） |
 | `MERGE-RESEARCH.md` | 合併研究與 15 輪記錄（為什麼這樣併、哪一步被自己的量推翻） |
-| `AGENTS.md` | 給接手者的 33 條坑（每條都付過代價） |
+| `AGENTS.md` | 給接手者的 46 條坑（每條都付過代價） |
 | `DEAD-CODE.md` | 死碼與重複清冊（自動生成） |
 | `ABORT-CONTRACTS.md` | `abort(` 逐站點契約表（自動生成，151 條待改清單） |
 

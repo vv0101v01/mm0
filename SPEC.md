@@ -2414,3 +2414,28 @@ moon info
 python3 tools/audit_spec.py --write
 python3 tools/audit_spec.py --check
 ```
+#### 4.15.9 推送與冷啟動驗證
+
+推送的內容就是 `merge/` 這一棵樹（**只含合成後的最新完全體**）：
+
+| 項目 | 值 |
+|---|---|
+| 遠端 | `https://github.com/vv0101v01/mm0`（分支 `main`） |
+| 提交 | `5d47031` |
+| 檔案數 | **354**（267 個 `.mbt` ＋ 文檔／工具／帳本／日誌） |
+| 樹大小 | 6.2 MB（工作目錄 268 MB —— 差額全在 `_build/`／`.mooncakes/`） |
+| 排除 | `_build/`、`.mooncakes/`、`*.mbti`（`.gitignore` 明列） |
+| 未推送 | `golden/`、`notebook/` 兩個原倉 —— 內容已在樹裡，再推就是重複的舊檔 |
+
+**冷啟動驗證（不是「我這裡能跑」，是「 clone 下來能跑」）**：在空目錄 `git clone` 之後重跑
+
+```text
+moon check --deny-warn        131 tasks, 0 error / 0 warning
+moon test                     192 / 192
+doc_audit / arch_check        DOC_OK / ARCH_OK (41 / 13 / 103)
+dead_code / abort_audit       DEAD_CODE_OK / ABORT_OK
+ledger verify                 VERIFY ok=true records=36
+```
+
+全部重現。**推送的驗收標準是「別人 clone 後量到同樣的數字」，不是「我推上去了」。**
+

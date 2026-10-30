@@ -1237,6 +1237,13 @@ B4 壞素數不可消除、B5 ANF 稀疏性爆炸、B6 Hurewicz 只到 π₂、B
 git init && git add -A && git commit -m "..." && git push -u origin main
 ```
 
+**結果**：`https://github.com/vv0101v01/mm0`、分支 `main`、提交 `5d47031`、**354 個檔案／6.2 MB**。
+`.gitignore` 排除 `_build/`（268 MB 的工作目錄裡有 260 MB 是它）、`.mooncakes/`、`*.mbti`。
+
+**冷啟動驗證**：另開空目錄 `git clone`，重跑全部閘門 —— `moon check --deny-warn` 131 tasks 0/0、
+`moon test` 192/192、ARCH/DOC/DEAD/ABORT 全綠、`ledger verify ok=true records=36`。
+**這一步才是驗收**：能推上去只證明有權限，能 clone 下來量到同樣的數字才證明「完全體」。
+
 ---
 
 ## 附錄 A：如何重跑
